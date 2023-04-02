@@ -11,14 +11,29 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div>
-      
+
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
-            <img v-bind:src="image">
+            <img v-bind:src="image" />
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+
+            <!-- Vues version af if else (v-else er ikke obligatorisk) -->
+            <!-- <p v-if="inStock">In stock</p>
+            <p v-else>Out of stock</p> -->
+
+            <!-- Chained conditional logic -->
+            <p v-if="inventory > 10">In stock</p>
+            <p v-else-if="inventory <=10 && inventory > 0">Almost sold out!</p>
+            <p v-else>Out of stock</p>
+
+            <!-- Code challenge -->
+            <p v-if="onSale">This item is on sale!</p>
+
+            <!-- v-show toggler elementets visibilitet = display: none -->
+            <!-- <p v-show="inStock">In stock</p> -->
           </div>
         </div>
       </div>
@@ -29,7 +44,7 @@
 
     <!-- Mount App -->
     <script>
-      const mountedApp = app.mount('#app')
+      const mountedApp = app.mount("#app");
     </script>
   </body>
 </html>
