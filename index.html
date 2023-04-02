@@ -17,11 +17,12 @@
           <div class="product-image">
             <!-- (v-bind kan erstattes af :, fx <img :src="image">) -->
             <img v-bind:src="image" />
-            <a :href="url">Here is a link!</a>
           </div>
 
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <!-- Solution -->
+            <a :href="url">Here is a link!</a>
           </div>
         </div>
       </div>
