@@ -20,6 +20,7 @@
           <div class="product-info">
             <h1>{{ product }}</h1>
 
+            <!-- CONDITIONAL RENDERING -->
             <!-- Vues version af if else (v-else er ikke obligatorisk) -->
             <!-- <p v-if="inStock">In stock</p>
             <p v-else>Out of stock</p> -->
@@ -29,7 +30,7 @@
             <p v-else-if="inventory <=10 && inventory > 0">Almost sold out!</p>
             <p v-else>Out of stock</p>
 
-            <!-- Code challenge solution -->
+            <!-- Coding challenge - Add an onSale boolean to the data object. Use that to conditionally render a p tag that says "On sale" whenever onSale is true -->
             <p v-if="onSale">This item is on sale!</p>
 
             <!-- v-show toggler elementets visibilitet = display: none -->
