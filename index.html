@@ -27,10 +27,12 @@
               <li v-for="detail in details">{{ detail }}</li>
             </ul>
             <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">{{ variant.color }}</div>
+
+            <!-- EVENT HANDLING -->
             <!-- <button class="button" v-on:click="cart +=1">Add to Cart</button> Shorthand for v-on: = @ -->
             <button class="button" @click="addToCart">Add to Cart</button>
 
-            <!-- Coding challenge solution -->
+            <!-- Coding challenge - Create a new button that decrements the value of the cart-->
             <button class="button" @click="removeFromCart">Remove from Cart</button>
           </div>
         </div>
