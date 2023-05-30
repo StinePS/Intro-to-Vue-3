@@ -21,12 +21,14 @@
             <h1>{{ product }}</h1>
             <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
+
+            <!-- LIST RENDERING -->
             <ul>
               <!-- Vues version af et "for-loop" -->
               <li v-for="detail in details">{{detail}}</li>
             </ul>
             <div v-for="variant in variants" :key="variant.id">{{variant.color}}</div>
-            <!-- Coding challenge solution -->
+            <!-- Coding challenge - Add an array of sizes to the data object. Use v-for to display them in a list -->
             <ul>
               <li v-for="(size, index) in sizes" :key="index">{{ size }}</li>
             </ul>
